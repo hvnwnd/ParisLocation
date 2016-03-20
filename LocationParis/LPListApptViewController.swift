@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListApptViewController: UIViewController {
+class LPListApptViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

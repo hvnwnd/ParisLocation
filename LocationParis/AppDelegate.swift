@@ -12,10 +12,23 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let APP_ID = "5F7F3B9D-9B9E-41CF-FF62-52DB2D967300"
+    let SECRET_KEY = "0219F6B4-B0B4-1266-FF0F-E1AAF8270200"
+    let VERSION_NUM = "v1"
 
-
+    var backendless = Backendless.sharedInstance()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        
+        
+        
+        // Test code
+        
+        var appart = Appart()
+        appart.saveNewAppart()
+        
         return true
     }
 
